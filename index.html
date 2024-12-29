@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Primary Meta Tags -->
+    <title>LCARS (Library Computer Access/Retrieval System)</title>
+    <meta name="title" content="LCARS (Library Computer Access/Retrieval System)">
+    <meta name="description" content="A Star Trek-inspired LCARS interface that works on any monitor!">
+    <meta name="keywords" content="Star Trek, LCARS">
+    <meta name="author" content="Lou Huang">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lcars.computer/">
+    <meta property="og:title" content="LCARS (Library Computer Access/Retrieval System)">
+    <meta property="og:description" content="A Star Trek-inspired LCARS interface that works on any monitor!">
+    <meta property="og:image" content="https://lcars.computer/preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lcars.computer/">
+    <meta property="twitter:title" content="LCARS (Library Computer Access/Retrieval System)">
+    <meta property="twitter:description" content="A Star Trek-inspired LCARS interface that works on any monitor!">
+    <meta property="twitter:image" content="https://lcars.computer/preview.jpg">
+
+    <style>
+      /* Force iPad Safari from pinch-zooming or panning when touch actions are
+         performed on the screen, which deforms the look */
+      body {
+        touch-action: none;
+      }
+    </style>
   </head>
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <script src="index.js"></script>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="/vendor/perlin.js"></script>
+    <script type="module" src="/src/index.js"></script>
   </body>
 </html>
